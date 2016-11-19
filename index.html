@@ -15,12 +15,12 @@
         <link rel="stylesheet" href="css/wiki.css">
     </head>
     <body>
+    <a href="http://jamestbyrne.com"><img id="logo" src="img/jb-logo.png"/></a>
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
         <!-- Add your site or application content here -->
-
 <div id="top_container">
     
    
@@ -28,10 +28,11 @@
      <h1>Wikipedia Viewer</h1>
 </div>
 <div id="searchbar_wrapper">
-
-<input id="search_box" class="form-control" type="text" placeholder="Search"/>
-<a><button id="search_submit" type="button" class="btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button></a>
-<a target="_blank" href="https://en.wikipedia.org/wiki/Special:Random"><button id="random_btn" type="button" class="btn btn-primary" ><i class="fa fa-random" aria-hidden="true"></i></button></a>
+<div id="searchbar">
+<i class="fa fa-search" aria-hidden="true"></i><input id="search_box" class="form-control" type="text" placeholder="Search for an article"/>
+</div>
+<a><button id="search_submit" type="button" class="btn btn-primary">Search</button></a>
+<a target="_blank" href="https://en.wikipedia.org/wiki/Special:Random"><button id="random_btn" type="button" class="btn btn-primary" >Random Article</button></a>
 </div>
 <div id="article_wrapper">
 <div id="search_title"></div>
@@ -40,7 +41,13 @@
 </div>
 <div class="back-to-top"></div>
         <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/smooth-scroll-master/src/js/smooth-scroll.js"></script>
 <script src="js/wiki.js"></script>
     </body>
-
+<footer>
+<a data-scroll id="back-to-top" href="#">Back to top</a>
+</footer>
+<script>
+    smoothScroll.init();
+</script>
 </html>
