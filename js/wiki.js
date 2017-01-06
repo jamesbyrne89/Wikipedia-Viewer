@@ -15,7 +15,7 @@ async: false,
 dataType: "jsonp",
 success: function(data){
 
-
+console.log(data);
 if (searchTerm == ""){
 $('#search_title').html("Oops. Please type something and try again.");
 }
@@ -54,34 +54,9 @@ error: function(errorMessage){
 }
 
 
-  // back to top
-
- $ (document).ready(function() {
-        var offset = 220;
-        var duration = 500;
-      $(window).scroll(function() {
-        if ($(this).scrollTop() > offset) {
-            $('.back-to-top').fadeIn(duration);
-        } else {
-            $('.back-to-top').fadeOut(duration);
-        }
-      });
-    
-      $('.back-to-top').click(function(event) {
-        event.preventDefault();
-        $('html, body').animate({scrollTop: 0}, duration);
-        return false;
-      })
-
-      // niceScroll
-        //$("html").niceScroll({
-        //  scrollspeed: 50,
-         // mousescrollstep: 45,
-       // });
-
 });
 
-});
+
 
 
 

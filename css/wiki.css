@@ -61,12 +61,19 @@ table {
 	border-spacing: 0;
 }
 
-
+/* STYLES */
 
 body {
 
-background-color: #212221;
+	background-color: #212221;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 
+
+}
+
+::selection {
+		background-color: #9d9e9d;
 }
 
 #logo {
@@ -101,6 +108,8 @@ background-color: #212221;
 	font-style: italic;
 	color: #9d9e9d;
 	margin: -35px auto 0 auto;
+	position: relative;
+	z-index: 1;
 }
 
 #top_container h2 {
@@ -114,6 +123,7 @@ background-color: #212221;
 	width: 100%;
 	display: table;
 	text-align: center;
+	position: relative;
 }
 
 #top_container h2 span {
@@ -128,6 +138,17 @@ background-color: #212221;
 #top_container a:visited {
 	    color: #865;
 }
+
+#top_container a:link {
+	    color: #865;
+	    position: relative;
+	    z-index: 2;
+}
+
+#top_container a:hover {
+	    transform: translateY(-20px);
+}
+
 
 /* SEARCHBAR */
 
@@ -171,12 +192,15 @@ float: left;
  }
 input:-webkit-autofill {
     -webkit-box-shadow: 0 0 0px 1000px white inset;
-    outline: none;
+    outline: #fff;
+    background-color: #fff;
 }
 
 input:focus::-webkit-input-placeholder {
     opacity: 0;
 }
+
+input[type="text"], input[type="password"] { outline: none; }
 
 
 /* BUTTONS */
