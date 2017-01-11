@@ -32,8 +32,6 @@ $('#output').fadeIn("slow").prepend("<a href="+link+"><li><h3>" + heading + "</h
 
 
 }
-$('#search_box').val('');
-
 }
 
 },
@@ -49,13 +47,8 @@ error: function(errorMessage){
 	});
 
 	$('#search_box').keyup(function(event) {
-		if (event.keyCode == 13) { // Enter key pressed
 			$('#search_submit').click(); // Trigger search button click event
-}
-
-
 });
-
 
 
 
